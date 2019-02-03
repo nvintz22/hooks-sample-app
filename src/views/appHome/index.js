@@ -4,7 +4,8 @@ import { Group, Input, Label, Bar } from '../../resources/emotions/forms';
 
 const Home = () => {
     const [name, setName] = useState('Danniel Irvin')
-    const handlChange = e => setName(e.targetvalue)
+    const handleChange = e => setName(e.target.value)
+    
 
     return (
         <Fragment>
@@ -13,7 +14,7 @@ const Home = () => {
             <br/>
             <br/>
             <form>
-                <Group class="group">      
+                <Group className="group">      
                     <Input type="text" required onChange={handleChange} value={name}/> 
                     <span className="highlight"></span>
                     <Bar className="bar"></Bar>

@@ -6,28 +6,29 @@ import Arrow from '../../assets/images/arrow.png';
 
 
 const Gallery = () => {
-  const [ isActive, setActive ] = useState(false)
+  const [ isActive, setIsActive ] = useState(false)
   const [ activeImage, setActiveImage ] = useState(null)
   const [ activeIndex, setActiveIndex] = useState(-1)
   const [images, setImages] = useState([])
   
+
   useEffect(() => {
     setImages(GalleryAssets)
-    document.addEventListener('keydown', this.keyListener)
+    document.addEventListener('keydown', keyListener)
     return () => {
-      document.removeEventListener('keydown', this.keyListener)
+      document.removeEventListener('keydown', keyListener)
     }
-  }, [images])
+  }, [images, activeIndex])
                 
-  const keyListener = () => {
+  const keyListener = e => {
     switch(e.key) {
-      case "Escape": return this.setState({ isActive: false })
-      case "ArrowRight": return this.moveNext(e)
-      case "ArrowLeft": return this.moveNext(e)
+      case "Escape": return setIsActive(false)
+      case "ArrowRight": return moveNext(e)
+      case "ArrowLeft": return moveNext(e)
       default: return;
     }
   }
-  const setActiveImage = (image, index) => {
+  const setImage = (image, index) => {
     setActiveImage(image)
     setIsActive(true)
     setActiveIndex(index)
@@ -40,14 +41,14 @@ const Gallery = () => {
     setActiveImage(images[nextIndex].url)
   }
 
-  moveBack = e => {
+  const moveBack = e => {
     e.stopPropagation();
     const prevIndex = (activeIndex - 1 + images.length) % images.length
     setActiveIndex(prevIndex)
     setActiveImage(images[prevIndex].url)
   }
 
-  toggleActive = () => {
+  const toggleActive = () => {
     setIsActive(!isActive)
   }
 
@@ -58,18 +59,18 @@ const Gallery = () => {
         <ul id="photo-gallery">
           {
             images.map((image, index) => (
-              <li onClick={() => this.setActiveImage(image.url, index)}>
+              <li onClick={() => setImage(image.url, index)}>
                 <img src={image.url} title={image.name}/>
               </li>
             ))
           }
         </ul>
       </Photos>
-      <Overlay isActive={this.state.isActive} onClick={this.toggleActive}>
+      <Overlay isActive={isActive} onClick={toggleActive}>
         <div>
-          <img src={this.state.activeImage} onClick={this.moveNext}/>
-          <ArrowStyle src={Arrow} onClick={this.moveBack}/>
-          <ArrowStyle src={Arrow} dir="right" onClick={this.moveNext}/>
+          <img src={activeImage} onClick={moveNext}/>
+          <ArrowStyle src={Arrow} onClick={moveBack}/>
+          <ArrowStyle src={Arrow} dir="right" onClick={moveNext}/>
         </div>
       </Overlay>
     </Fragment>

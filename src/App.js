@@ -5,6 +5,7 @@ import './App.css';
 
 import Home from './views/appHome';
 import Gallery from './views/appGallery';
+import Movies from './views/appMovies';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
             <header className="App-header">
             <Route path="/" exact component={Home} />
             <Route path="/gallery" exact component={Gallery} />
+            <Route path="/movies" exact component={Movies} />
             </header>
         </div>
       </Router>

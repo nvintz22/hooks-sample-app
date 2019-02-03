@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Should render home page 1`] = `
+<Home>
+  <h3>
+    React@16.8 (Hooks)
+  </h3>
+  <small>
+    Danniel Irvin
+  </small>
+  <br />
+  <br />
+  <form>
+    <Styled(div)
+      className="group"
+    >
+      <div
+        className="group css-1c687hf"
+      >
+        <Styled(input)
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value="Danniel Irvin"
+        >
+          <input
+            className="css-zs2jp2"
+            onChange={[Function]}
+            required={true}
+            type="text"
+            value="Danniel Irvin"
+          />
+        </Styled(input)>
+        <span
+          className="highlight"
+        />
+        <Styled(div)
+          className="bar"
+        >
+          <div
+            className="bar css-utljbf"
+          />
+        </Styled(div)>
+        <Styled(label)>
+          <label
+            className="css-1odazk5"
+          >
+            First name
+          </label>
+        </Styled(label)>
+      </div>
+    </Styled(div)>
+  </form>
+</Home>
+`;
