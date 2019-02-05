@@ -6,6 +6,7 @@ import './App.css';
 import Home from './views/appHome';
 import Gallery from './views/appGallery';
 import Movies from './views/appMovies';
+import AppMath from './views/appMath';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/gallery" exact component={Gallery} />
             <Route path="/movies" exact component={Movies} />
+            <Route path="/math" exact component={AppMath} />
             </header>
         </div>
       </Router>

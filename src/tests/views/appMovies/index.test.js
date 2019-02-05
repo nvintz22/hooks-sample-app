@@ -12,8 +12,8 @@ expect.addSnapshotSerializer({
 
 describe('Movies' , () => {
     it('should return all movies', () => {
-        const Movies = FindMovies()
-        expect(Movies).toMatchSnapshot()
+        const AllMovies = FindMovies()
+        expect(AllMovies).toMatchSnapshot()
     })
  
     it('should return avengers movie', () => {
