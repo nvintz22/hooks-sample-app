@@ -1,39 +1,39 @@
 [
     {
         "title": "Alladin",
-        "cover": "alladin.jpg"
+        "cover": "alladin"
     },
     {
         "title": "Avengers End Game",
-        "cover": "avengers.jpg"
+        "cover": "avengers"
     },
     {
         "title": "Captain Marvel",
-        "cover": "captain-marvel.jpg"
+        "cover": "captain-marvel"
     },
     {
         "title": "Dark Phoenix",
-        "cover": "dark-phoenix.jpg"
+        "cover": "dark-phoenix"
     },
     {
         "title": "Glass",
-        "cover": "glass.jpg"
+        "cover": "glass"
     },
     {
         "title": "Shazam",
-        "cover": "shazam.jpg"
+        "cover": "shazam"
     },
     {
         "title": "Spiderman Far from home",
-        "cover": "spiderman-far-from-home.jpg"
+        "cover": "spiderman-far-from-home"
     },
     {
         "title": "Star Wars",
-        "cover": "star-wars.jpg"
+        "cover": "star-wars"
     },
     {
         "title": "Toy Story 4",
-        "cover": "toy-story-4.jpg"
+        "cover": "toy-story-4"
     }
 ]
 
